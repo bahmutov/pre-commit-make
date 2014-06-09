@@ -3,7 +3,7 @@
 var spawn = require('child_process').spawn;
 
 function runMake() {
-  var make = spawn('make', ['post-merge']);
+  var make = spawn('make', ['pre-commit']);
   make.stdout.setEncoding('utf8');
   make.stderr.setEncoding('utf8');
 
@@ -23,17 +23,6 @@ function runMake() {
   });
 }
 
-function hasNoChanges() {
-  // args - see http://www.manpagez.com/man/5/githooks/
-  console.log(process.argv);
-  var wasSquash = process.argv[2] === '1';
-  return wasSquash;
-}
-
-if (hasNoChanges()) {
-  process.exit(0);
-} else {
-  console.log('Running post-merge hook');
-  runMake();
-}
+console.log('Running pre-commit hook');
+runMake();
 

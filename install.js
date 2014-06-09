@@ -59,7 +59,7 @@ if (!existsSync(git) || !fs.lstatSync(git).isDirectory()) {
 }());
 
 
-var hookScripts = ['post-merge'];
+var hookScripts = ['pre-commit'];
 hookScripts.forEach(installHook);
 
 function installHook(name) {
