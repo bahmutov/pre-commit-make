@@ -4,7 +4,8 @@
   "description": "Runs make command before commit",
   "main": "index.js",
   "scripts": {
-    "install": "node install"
+    "install": "node install",
+    "test": "grunt"
   },
   "pre-commit": "grunt",
   "repository": {
