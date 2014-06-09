@@ -17,7 +17,7 @@ function runMake() {
 
   make.on('close', function (code) {
     if (code) {
-      console.log('make post-merge exited with code', code);
+      console.log('make pre-commit exited with code', code);
       process.exit(code);
     }
   });
