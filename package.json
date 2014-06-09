@@ -1,6 +1,6 @@
 {
   "name": "pre-commit-make",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Runs make command before commit",
   "main": "index.js",
   "scripts": {

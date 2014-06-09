@@ -18,6 +18,7 @@ function runMake() {
   make.on('close', function (code) {
     if (code) {
       console.log('make pre-commit exited with code', code);
+      console.log('Have you defined "pre-commit" target in the Makefile?');
       process.exit(code);
     }
   });
